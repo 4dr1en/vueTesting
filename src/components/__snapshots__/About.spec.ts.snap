@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`About > should match the snapshot 1`] = `
+"<div>
+  <h1>ABOUT US</h1>
+</div>"
+`;

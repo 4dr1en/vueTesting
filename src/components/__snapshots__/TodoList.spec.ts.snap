@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TodoList > Should match the snapshot 1`] = `
+"<div>
+  <h1>LIST OF TODO</h1>
+  <ul class=\\"todo-list\\"></ul>
+  <div><label for=\\"todo\\">Todo</label><input type=\\"text\\" id=\\"todo\\"><button>Add</button></div>
+</div>"
+`;

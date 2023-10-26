@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TodoEdit > Should match the snapshot 1`] = `"<div><label for=\\"todo\\">Todo : </label><input type=\\"text\\" id=\\"todo\\"><button>Update</button></div>"`;

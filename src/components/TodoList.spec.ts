@@ -17,9 +17,9 @@ describe("TodoList", () => {
     const newTodo = "Buy groceries";
 
     await input.setValue(newTodo);
-    await todoForm.find('button').trigger("click");
+    await todoForm.find("button").trigger("click");
 
-    expect(wrapper.find('.todo-list').text()).toContain(newTodo);
+    expect(wrapper.find(".todo-list").text()).toContain(newTodo);
   });
 
   it("removes a todo when the remove button is clicked", async () => {
@@ -30,12 +30,12 @@ describe("TodoList", () => {
     const newTodo = "Buy groceries";
 
     await input.setValue(newTodo);
-    await wrapper.find('button').trigger("click");
+    await wrapper.find("button").trigger("click");
 
-    const removeButton = wrapper.find('button.todo__delete');
+    const removeButton = wrapper.find("button.todo__delete");
     await removeButton.trigger("click");
 
-    expect(wrapper.find('.todo-list').text()).not.toContain(newTodo);
+    expect(wrapper.find(".todo-list").text()).not.toContain(newTodo);
   });
 
   it("Display the 'TodoEdit' component when the edit button is clicked", async () => {
@@ -45,13 +45,16 @@ describe("TodoList", () => {
     const input = todoForm.find("input");
     const newTodo = "Buy groceries";
     await input.setValue(newTodo);
-    await wrapper.find('button').trigger("click");
+    await wrapper.find("button").trigger("click");
 
-    const editButton = wrapper.find('button.todo__edit');
+    const editButton = wrapper.find("button.todo__edit");
     await editButton.trigger("click");
 
-    expect(wrapper.findComponent({ name: "TodoEdit" })
-        .exists())
-        .toBe(true);
+    expect(wrapper.findComponent({ name: "TodoEdit" }).exists()).toBe(true);
+  });
+
+  it("Should match the snapshot", () => {
+    const wrapper = mount(TodoList);
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
